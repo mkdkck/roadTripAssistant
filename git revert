@@ -1,0 +1,32 @@
+[33mcommit d7887eee234c2c0a0a7c8f61c1dc1c9ac067cde2[m[33m ([m[1;36mHEAD -> [m[1;32mRobertB[m[33m, [m[1;32mmain[m[33m)[m
+Author: Robert Bailey <r.bail@hotmail.com>
+Date:   Mon Oct 23 19:32:27 2023 +1030
+
+    road trip changes
+
+[33mcommit 2d258e1e543ce2e98d335438587615c686a38566[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 6cb75e0 7f81519
+Author: Colin Liu <142997482+mkdkck@users.noreply.github.com>
+Date:   Sun Oct 22 13:49:45 2023 +1030
+
+    Merge pull request #1 from mkdkck/basicFolderStructure
+    
+    created basic empty files with folder structures
+
+[33mcommit 7f815193ecdc76e66f19bf3b9cf8a718547f45b3[m[33m ([m[1;31morigin/basicFolderStructure[m[33m)[m
+Author: mkdkck <colin173@gmail.com>
+Date:   Sun Oct 22 13:47:53 2023 +1030
+
+    created basic empty files with folder structures
+
+[33mcommit 6cb75e0c7c4088fbcc5195a803b806e29e8e9d28[m
+Author: mkdkck <colin173@gmail.com>
+Date:   Sun Oct 22 13:41:20 2023 +1030
+
+    add gitignore file
+
+[33mcommit 9ee5103bbdecc5c1c2c8783d6de00c4b0e8fc72a[m
+Author: Colin Liu <142997482+mkdkck@users.noreply.github.com>
+Date:   Sun Oct 22 13:38:32 2023 +1030
+
+    Initial commit
