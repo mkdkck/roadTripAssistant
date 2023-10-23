@@ -4,17 +4,46 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Road Trip Assistant</title>
+        
         <script src="https://cdn.tailwindcss.com"></script>
         <!-- //link for tailwind -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
 
     <body>
+        <header class="bg-amber-300 align-middle">
+            <h1>Road Trip Assistant</h1>
+        </header>
 
+        <!-- this is the section for the search bar with a popup menu to show the information of weather and gas price in the area -->
+        <div class="grid-cols-12 container">
+            <div class="grid-cols-3">
+                <form id="searchBar">
+                    <div>
+                        <h3>Search for a Location:</h3>
+                        <input class="" id="location">
+                    </div>
+                    <button type="submit" id="searchBtn">Search</button>
+                </form>
+                <!-- need a popup menu to show weather, gas price of the location -->
+                <div>
+    
+                </div>
+            </div>
 
+            <!-- this is the section goes with the google map -->
+            <div class="grid-cols-9">
+                <p>place holder</p>
+            </div>
+        </div>
 
-
+        <!-- this is the section of the monthly calendar showing , when user clicks, the location and weather info is placed into the calendar blocks -->
+        <div id="Calendar">
+            
+        </div>
         
+
         <script src="./assets/js/script.js"></script>
     </body>
 
