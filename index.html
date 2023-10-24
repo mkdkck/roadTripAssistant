@@ -22,7 +22,7 @@
         <!-- this is the section for the search bar with a popup menu to show the information of weather and gas price in the area -->
         <div class="columns section">
             <div class="column is-one-quarter">
-                <form id="searchBar">
+                <form class="column" id="searchBar">
                     <div>
                         <h3 class="has-text-weight-semibold">Search for a Location:</h3>
                         <input class="is-full" id="location">
@@ -30,15 +30,14 @@
                     <button class="button is-link is-rounded mt-3 is-size-6" type="submit" id="">Search</button>
                 </form>
                 <!-- need a popup menu to show weather, gas price of the location -->
-                <div>
-    
+                <div class="column">
+
+                    <iframe src="https://fuelprice.io/widget/small/?city=brisbane"></iframe>
                 </div>
             </div>
 
             <!-- this is the section goes with the google map -->
-            <div class="column is-three-quarter">
-                <p>place holder</p>
-            </div>
+            <div id="map" class="column is-three-quarter"></div>
         </div>
 
         <!-- this is the section of the 7 days calendar showing , when user clicks, the location and weather info is placed into the calendar blocks -->
@@ -79,9 +78,12 @@
                 <div>weather</div>
             </div>
         </div>
+
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+        <script src="./assets/js/script.js"></script>
+
         
 
-        <script src="./assets/js/script.js"></script>
     </body>
 
     <footer class="container">
