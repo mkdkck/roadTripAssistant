@@ -1,7 +1,12 @@
 # Road Trip Assistant
 ## Description
-An app which allows users to plan for a road trip by searching locations for petrol prices and weather forecasts, and features a Google Maps window for other route and location info.
+- Road Trip Assistant is an app which allows users to plan for a road trip by searching locations for petrol prices and weather forecasts.
+- Users can search the average petrol prices for any major town and city in Australia.
+- The app also features a Google Maps window for other route and location info.
 ## Technologies Used
-Bulma CSS, widgets from fuelprice.io, Google Maps API, weather information from https://api.openweathermap.org
+- Bulma CSS
+- Widgets from fuelprice.io
+- Google Maps API
+- Weather information from https://api.openweathermap.org
 ## Screenshot
 ## Link
