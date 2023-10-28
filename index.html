@@ -1,11 +1,8 @@
 <html lang="en">
-
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <title>Road Trip Assistant</title>
-        
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <!-- //link to bulma -->
         <link
@@ -18,15 +15,13 @@
         />
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
-
     <body class="container m-5">
         <header class="hero is-warning">
             <div class="hero-body">
                 <h1 class="title">Road Trip Assistant</h1>
                 <h2 class="subtitle">Drive with confidence</h2>
-            </div>            
+            </div>
         </header>
-
         <!-- this is the section for the search bar with a popup menu to show the information of weather and gas price in the area -->
         <div class="columns section">
             <div class="column is-4">
@@ -42,54 +37,51 @@
                 <div class="column m-0 p-0" id="searchResults">
                 </div>
             </div>
-
             <!-- this is the section goes with the google map -->
             <div id="map" class="column is-8"></div>
         </div>
-
         <!-- this is the section of the 5 days calendar showing , when user clicks, the location and weather info is placed into the calendar blocks -->
-        <section class="pt-0 section">
+        <section class="pt-0 infosection">
             <h3 class="has-text-weight-semibold is-size-3">5-days planner</h3>
             <h4 class="has-text-weight-semibold is-size-5 mb-5">click each day below to record your destinations and weather detail</h4>
-            <div id="Calendar" class="columns ">
+            <div id="Calendar" class="columns">
                 <div id="day1" class="column has-background-success-light m-3 p-5">
                     <div class="is-size-4">date</div>
                     <div class="is-size-5 pb-3">day</div>
-                    <div class="is-underlined">location</div>
-                    <div>temp</div>
-                    <div>weather</div>
+                    <div class="is-underlined"></div>
+                    <div id = "temp1"></div>
+                    <div id = "description1"></div>
                 </div>
                 <div id="day2" class="column has-background-success-light m-3 p-5">
                     <div class="is-size-4">date</div>
                     <div class="is-size-5 pb-3">day</div>
-                    <div class="is-underlined">location</div>
-                    <div>temp</div>
-                    <div>weather</div>
+                    <div class="is-underlined"></div>
+                    <div id="temp2"></div>
+                    <div id="description2"></div>
                 </div>
                 <div id="day3" class="column has-background-success-light m-3 p-5">
                     <div class="is-size-4">date</div>
                     <div class="is-size-5 pb-3">day</div>
-                    <div class="is-underlined">location</div>
-                    <div>temp</div>
-                    <div>weather</div>
+                    <div class="is-underlined"></div>
+                    <div id ="temp3"></div>
+                    <div id ="description3"></div>
                 </div>
                 <div id="day4" class="column has-background-success-light m-3 p-5">
                     <div class="is-size-4">date</div>
                     <div class="is-size-5 pb-3">day</div>
-                    <div class="is-underlined">location</div>
-                    <div>temp</div>
-                    <div>weather</div>
+                    <div class="is-underlined"></div>
+                    <div id ="temp4"></div>
+                    <div id ="description4"></div>
                 </div>
                 <div id="day5" class="column has-background-success-light m-3 p-5">
                     <div class="is-size-4">date</div>
                     <div class="is-size-5 pb-3">day</div>
-                    <div class="is-underlined">location</div>
-                    <div>temp</div>
-                    <div>weather</div>
+                    <div class="is-underlined"></div>
+                    <div id = "temp5"></div>
+                    <div id = "description5"></div>
                 </div>
             </div>
-        </section>       
-
+        </section>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script>
             (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
@@ -97,11 +89,8 @@
             });
           </script>
         <script src="./assets/js/script.js"></script>
-
     </body>
-
     <footer class="section">
         <h5>Search the location you want to go and check the weather, petrol prices in the area. click on the 5 days calendar to save your destinations!</h5>
     </footer>
-
 </html>
