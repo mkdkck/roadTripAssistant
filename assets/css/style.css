@@ -1,16 +1,29 @@
 #map {
     height: 45vh;
-    
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
     }
 
 .container-middle{
     display: flex;
+    border-radius: 12px;
+    margin-top: 10px;
+    background-color:rgb(220, 217, 217);
 }
 
 section.hero{
     padding-left: 50px;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.button{
+    border-radius: 12px;
+}
+
+.hero {
+    border-radius: 12px;
+    margin-top: 10px;
 }
 
 .search_bar{
@@ -21,6 +34,10 @@ section.hero{
 
 #location{
     width:160px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc; 
 }
 
 #input_label{
