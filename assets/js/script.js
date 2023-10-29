@@ -8,7 +8,7 @@ let geocoder;
 let marker;
 let fuelCity;
 let searchResults = $('#searchResults');
-let itinerary = [];
+let itinerary;
 
 // google map default map
 async function initMap() {
@@ -101,11 +101,17 @@ function showSearchResult(){
     return response.json();
   })
   .then (function (data){
+    // loop to put the weather data into each box
     for (i=1; i<6;i++) {
+      // see if the day has saved plan already, if it does, new search won`t over write it.
+      const dayCard= $("#day"+i);
+      if (dayCard.hasClass("cards")){
+      } else {
         $("#city"+i).text(fuelCity);
         y=i*8-4;
         $("#temp"+i).text(data.list[y].main.temp + "°C");
         $("#description" + i).text(data.list[y].weather[0].description);
+      }       
     }
   })
 
@@ -113,33 +119,53 @@ function showSearchResult(){
   const fuelPrice = $('<iframe>');
   fuelPrice.attr("src","https://fuelprice.io/widget/small/?city=" + fuelCity + "&height=300&width=200");
   searchResults.append(fuelPrice);
+  renderPage()
 }
 
 // event listener to the cards, when click on anyone of it, the data stored into the local storage
-
 for (i=1; i<6;i++) {
   $('#day'+i).on('click',function(event){
-  const cardTargeted = event.currentTarget;
-  day = {
-    cardID: cardTargeted.id,
-    city:cardTargeted.children[2].textContent,
-    temp:cardTargeted.children[3].textContent,
-    description:cardTargeted.children[4].textContent,
-  }
-  if (itinerary == undefined){
-    itinerary = day
-  } else if(itinerary.cardID == day.cardID) {
-    
-  } else {
-    itinerary.push(day);
-  }
-  localStorage.setItem('itinerary',JSON.stringify(itinerary));
-  })
-}
+    const cardTargeted = event.currentTarget;
+    itinerary = {
+      cardID: cardTargeted.id,
+      city:cardTargeted.children[2].textContent,
+      temp:cardTargeted.children[3].textContent,
+      description:cardTargeted.children[4].textContent,
+    }
 
+    //prevent to save empty data into local storage.
+    if (itinerary.city == "") {
+    } else {
+      localStorage.setItem(itinerary.cardID,JSON.stringify(itinerary))
+    }
+    renderPage()
+})};
+
+// clear the itinerary to restart the day planners.
+$("#clear").on('click', function(){
+  localStorage.clear();
+  for (i=1; i<6;i++) {
+    $("#day"+i).removeClass('background-color:rgb(124, 74, 9) cards')
+    $("#city"+i).text("");
+    $("#temp"+i).text("");
+    $("#description" + i).text("");
+  };
+})
+
+// renderPage with the data storaged in the local Storage
 function renderPage(){
-  const itinerary = JSON.parse(localStorage.getItem('itinerary'));
-  console.log(itinerary);
-}
+  for (i=1; i<6;i++) {
+    itinerary= JSON.parse(localStorage.getItem("day"+i));
+    if (itinerary == null) {
+    } else {
+      $("#day"+i).addClass('background-color:rgb(124, 74, 9) cards')
+      $("#city"+i).text(itinerary.city);
+      $("#temp"+i).text(itinerary.temp);
+      $("#description" + i).text(itinerary.description);
+    }
+}};
+renderPage()
 
-renderPage();
+
+
+

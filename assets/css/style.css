@@ -21,9 +21,7 @@
 }
 
 section.hero{
-    padding-left: 50px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 30px 50px;
 }
 
 .button{
@@ -33,7 +31,7 @@ section.hero{
 }
 
 .button:hover{
-    background-color: rgb(233, 151, 44);
+    background-color: rgb(124, 74, 9);
     color:white;
 }
 
@@ -66,4 +64,10 @@ section.hero{
 
 #input_label{
     margin-bottom: 12px;
+}
+
+.cards{
+    border-radius: 12px;
+    margin: 10px;
+    background-color: rgb(124, 74, 9);
 }
