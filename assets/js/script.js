@@ -23,6 +23,48 @@ async function initMap() {
         title: "",
     });
 }
+
+// Load currenty Date
+window.onload = function() {
+
+  // Get the current date
+  const currentDate = new Date();
+
+  // Number of elements to loop through
+  const numOutputs = 7;
+  
+  for(let i = 0; i < numOutputs; i++){
+
+    const nextDay = new Date();
+    nextDay.setDate(currentDate.getDate() + i);
+
+    // Format the date as a string in dd/mm/yyyy format
+    const day = nextDay.getDate();
+    const month = nextDay.getMonth() + 1; // Month is zero-indexed
+    const year = nextDay.getFullYear();
+
+    // Extract the day of the week
+    const dayOfWeek = nextDay.toLocaleDateString('en-US', { weekday: 'long' });
+
+    // Ensure day and month are displayed with leading zeros if needed
+    const formattedDay = day < 10 ? `0${day}` : day;
+    const formattedMonth = month < 10 ? `0${month}` : month;
+
+    // Construct the date string in dd/mm/yyyy format
+    const dateStr = `${formattedDay}/${formattedMonth}/${year}`;
+
+    // Find the element with the 'currentDate' ID and update its content
+    const dateElement = document.getElementById('currentDate_' + i);
+    dateElement.textContent = dateStr;
+    const dayOfWeekElement = document.getElementById('dayOfWeek_' + i);
+    dayOfWeekElement.textContent = dayOfWeek;
+  } 
+  
+
+};
+
+
+
 initMap();
 $('#searchBtn').on('submit', function(event){
     event.preventDefault();
