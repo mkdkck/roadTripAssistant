@@ -15,38 +15,41 @@
         />
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
-    <body class="container m-5">
-        <header class="hero is-warning">
+    <body class="container">
+        <header class="hero is-link">
             <div class="hero-body">
                 <h1 class="title">Road Trip Assistant</h1>
                 <h2 class="subtitle">Drive with confidence</h2>
             </div>
         </header>
         <!-- this is the section for the search bar with a popup menu to show the information of weather and gas price in the area -->
-        <div class="columns section">
-            <div class="column is-4">
+        <div class="container-middle">
+            <div class="search_bar">
                 <form class="column" id="searchBtn">
+                    <div id = "input_label">
+                        <label class="has-text-weight-semibold" for="location">Search for a Location</label>
+                    </div>
                     <div>
-                        <label class="has-text-weight-semibold" for="location">Search for a Location:</label>
                         <input class="is-full" id="location">
                     </div>
-                    <div id="warning"></div>
-                    <button class="button is-link is-rounded mt-3 is-size-6" type="submit" id="">Search</button>
+
+                    <button class="button is-link mt-3 is-size-6" type="submit" id="">Search</button>
                 </form>
                 <!-- need a popup menu to show weather, gas price of the location -->
-                <div class="column m-0 p-0" id="searchResults">
+                <div id="searchResults">
                 </div>
             </div>
             <!-- this is the section goes with the google map -->
-            <div id="map" class="column is-8"></div>
+            <div id="map" class="column"></div>
         </div>
         <!-- this is the section of the 5 days calendar showing , when user clicks, the location and weather info is placed into the calendar blocks -->
-        <section class="pt-0 section infosection">
+        <section class="hero is-link">
             <h3 class="has-text-weight-semibold is-size-3">5-days planner</h3>
-            <h4 class="has-text-weight-semibold is-size-5 mb-5">click each day below to record your destinations and weather detail</h4>
-            <div id="calendar" class="columns">
-                <div id="day1" class="column has-background-success-light m-3 p-5">
-                    <div class="is-size-4">
+            <h4 class="has-text-weight-semibold mb-5">click each day below to record your destinations and weather detail</h4>
+            <div id="Calendar" class="columns">
+                <div id="day1" class="column">
+
+                      <div class="is-size-4">
                         <p id="currentDate_0"></p>
                     </div>
                     <div class="is-size-5 pb-3">
@@ -57,7 +60,9 @@
                     <div id = "description1"></div>
 
                 </div>
-                <div id="day2" class="column has-background-success-light m-3 p-5">
+
+                <div id="day2" class="column">
+
                     <div class="is-size-4">
                         <p id="currentDate_1"></p>
                     </div>
@@ -69,7 +74,7 @@
                     <div id="description2"></div>
 
                 </div>
-                <div id="day3" class="column has-background-success-light m-3 p-5">
+                <div id="day3" class="column">
                     <div class="is-size-4">
                         <p id="currentDate_2"></p>
                     </div>
@@ -81,7 +86,7 @@
                     <div id ="description3"></div>
                     
                 </div>
-                <div id="day4" class="column has-background-success-light m-3 p-5">
+                <div id="day4" class="column">
                  <div class="is-size-4">
                         <p id="currentDate_3"></p>
                     </div>
@@ -92,7 +97,7 @@
                     <div id ="temp4"></div>
                     <div id ="description4"></div>
                 </div>
-                <div id="day5" class="column has-background-success-light m-3 p-5">
+                <div id="day5" class="column">
                     <div class="is-size-4">
                         <p id="currentDate_4"></p>
                     </div>
