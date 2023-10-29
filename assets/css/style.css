@@ -4,11 +4,20 @@
     border-bottom-right-radius: 12px;
     }
 
+/* .container{
+    background-color: #eadf69;
+} */
+
 .container-middle{
     display: flex;
     border-radius: 12px;
     margin-top: 10px;
-    background-color:rgb(220, 217, 217);
+    background-color:rgb(240, 234, 225);
+}
+
+.hero{
+    background-color: rgb(233, 168, 84);
+    color: white;
 }
 
 section.hero{
@@ -19,6 +28,21 @@ section.hero{
 
 .button{
     border-radius: 12px;
+    background-color: rgb(233, 151, 44);
+    color: white;
+}
+
+.button:hover{
+    background-color: rgb(233, 151, 44);
+    color:white;
+}
+
+.title{
+    color: white;
+}
+
+.subtitle{
+    color: white;
 }
 
 .hero {
