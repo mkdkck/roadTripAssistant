@@ -126,8 +126,8 @@ function showSearchResult(){
   })
 
   // fuel price function:
-  const fuelPrice = $('<iframe>');
-  fuelPrice.attr("src","https://fuelprice.io/widget/small/?city=" + fuelCity + "&height=300&width=200");
+  const fuelPrice = $('<iframe style="width:200px">');
+  fuelPrice.attr("src","https://fuelprice.io/widget/small/?city=" + fuelCity + "&height=200&width=200");
   searchResults.append(fuelPrice);
   renderPage()
 }
