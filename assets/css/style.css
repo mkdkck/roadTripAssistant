@@ -71,3 +71,7 @@ section.hero{
     margin: 10px;
     background-color: rgb(124, 74, 9);
 }
+
+#geocodeAlert {
+    text-align: center;
+}
