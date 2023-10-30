@@ -9,6 +9,7 @@ let marker;
 let fuelCity;
 let searchResults = $('#searchResults');
 let itinerary;
+$( "#geocodeAlert" ).hide();
 
 // google map default map
 async function initMap() {
@@ -84,15 +85,24 @@ $('#searchBtn').on('submit', function(event){
               position: results[0].geometry.location
           });
         } else {
-        // this alert should be change to a jquery UI
-          alert('Geocode was not successful for the following reason: ' + status);
+          
+        // JQuery UI show box integrated
+        $( "#geocodeAlert" ).show("blind", 500, callback);
+          function callback() {
+          setTimeout(function() {
+            $( "#geocodeAlert:visible" ).removeAttr( "style" ).fadeOut();
+          }, 1500 );
         }
+        $( "#geocodeAlert" ).hide();
+        };
+           
         addressGeo.lat = results[0].geometry.location.lat();
         addressGeo.lng = results[0].geometry.location.lng();
         fuelCity = results[0].address_components[0].long_name;
         showSearchResult();
       });
 })
+
 
 function showSearchResult(){
       //weather function goes in here, use variable 'addressGeo' to get the lat & Lng

@@ -5,10 +5,7 @@
         <title>Road Trip Assistant</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <!-- //link to bulma -->
-        <link
-        rel="stylesheet"
-        href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-        />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link
         href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
         rel="stylesheet"
@@ -22,6 +19,7 @@
                 <h2 class="subtitle">Drive with confidence</h2>
             </div>
         </header>
+        <h2 id="geocodeAlert" class="has-background-info-light has-text-primary-dark is-size-4">Please type in a correct city or address!!</h2>
         <!-- this is the section for the search bar with a popup menu to show the information of weather and gas price in the area -->
         <div class="container-middle">
             <div class="search_bar">
@@ -111,6 +109,7 @@
             </div>
         </section>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
             (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
               key: "AIzaSyCdaH6ElW7nawZmsW4ynUN_-Fzsbymkhh0",
