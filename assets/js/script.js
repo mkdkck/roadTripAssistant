@@ -10,6 +10,9 @@ let fuelCity;
 let searchResults = $('#searchResults');
 let itinerary;
 $( "#geocodeAlert" ).hide();
+$( "#detailAddress" ).dialog({
+    autoOpen: false
+});
 
 // google map default map
 async function initMap() {
@@ -98,7 +101,20 @@ $('#searchBtn').on('submit', function(event){
            
         addressGeo.lat = results[0].geometry.location.lat();
         addressGeo.lng = results[0].geometry.location.lng();
-        fuelCity = results[0].address_components[0].long_name;
+        console.log(results[0].address_components);
+
+        //traverse into google map data to find the city, for a more correct fuel result
+        fuelCity = "";
+        for (i=0; i<results[0].address_components.length;i++) {
+            for (x=0; x<results[0].address_components[i].types.length; x++){
+                if(results[0].address_components[i].types[x] == "locality"){
+                    fuelCity = results[0].address_components[i].long_name;
+        }}}
+        if (fuelCity){
+        } else {
+        $( "#detailAddress" ).dialog( "open" );
+                fuelCity=address;
+        }
         showSearchResult();
       });
 })
